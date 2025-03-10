@@ -37,6 +37,8 @@ ynh_config_add_systemd
 
 yunohost service add "$app" --description="Client for synchronizing online media" --log="/var/log/$app/$app.log"
 
+usermod -a -G ssl-cert $app
+
 #=================================================
 # INSTALL DODOC
 #=================================================
