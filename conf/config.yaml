@@ -27,10 +27,10 @@ listen:
     http: true
 # Uncomment below to enable HTTPS/SSL websockets
 # Note that you must also set https->enabled = true in the https definition
-#  - ip: ''
-#    port: 8443
-#    https: true
-#    io: true
+  - ip: ''
+    port: 8443
+    https: true
+    io: true
 # Default Socket.IO server - default interface, port 1337
   - ip: ''
     port: 1337
@@ -50,7 +50,7 @@ http:
   default-port: __PORT__
   # Specifies the root domain for cookies.  If you have multiple domains
   # e.g. a.example.com and b.example.com, the root domain is example.com
-  root-domain: 'localhost'
+  root-domain: '__DOMAIN__'
   # Specify alternate domains/hosts that are allowed to set the login cookie
   # Leave out the http://
   alt-domains:
@@ -81,9 +81,9 @@ https:
   # links with the appropriate port
   default-port: 8443
   domain: 'https://__DOMAIN__'
-  keyfile: 'localhost.key'
+  keyfile: '/etc/yunohost/certs/__DOMAIN__/key.pem'
   passphrase: ''
-  certfile: 'localhost.cert'
+  certfile: '/etc/yunohost/certs/__DOMAIN__/crt.pem'
   cafile: ''
   ciphers: 'HIGH:!DSS:!aNULL@STRENGTH'
 
