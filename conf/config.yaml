@@ -23,7 +23,7 @@ mysql:
 listen:
 # Default HTTP server - default interface, port 8080
   - ip: ''
-    port: 8080
+    port: __PORT__
     http: true
 # Uncomment below to enable HTTPS/SSL websockets
 # Note that you must also set https->enabled = true in the https definition
@@ -75,7 +75,7 @@ http:
 
 # HTTPS server details
 https:
-  enabled: false
+  enabled: true
   # Even though you may specify multiple ports to listen on for HTTPS above,
   # one port must be specified as default for the purposes of generating
   # links with the appropriate port
